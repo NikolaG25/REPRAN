@@ -1,0 +1,61 @@
+@import "../foundations/variables.scss";
+
+.cardActor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 75px;
+  height: max-content;
+
+  &__name {
+    width: 300px;
+    height: 120px;
+    padding: 30px;
+    color: white;
+    background-color: $mainColorDark;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: -65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    width: 350px;
+    max-height: 0;
+    padding: 85px 25px 0 25px;
+    color: black;
+    box-shadow: $shadow;
+    overflow: hidden;
+    transition: padding 0.7s ease-in-out, max-height 1s;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    position: absolute;
+    bottom: -30px;
+    cursor: pointer;
+    img {
+      transition: rotate 0.7s;
+    }
+  }
+  &.activeActor .cardActor__content {
+    max-height: 400px;
+    background-color: white;
+    transition: padding 0.7s ease-in-out, max-height 1s;
+    padding: 85px 25px 50px 25px;
+    z-index: -1;
+  }
+  &.activeActor .cardActor__button img {
+    rotate: 180deg;
+    transition: rotate 0.7s;
+  }
+}

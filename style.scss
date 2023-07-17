@@ -1,0 +1,131 @@
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+//import
+@import "./scss/foundations/variables.scss";
+
+@import "./scss/elements/fonts.scss";
+
+//components
+@import "./scss/components/btns.scss";
+@import "./scss/components/cardPrincipe.scss";
+@import "./scss/components/cardNews.scss";
+@import "./scss/components/cardDocu.scss";
+@import "./scss/components/cardActor.scss";
+@import "./scss/components/cardContact.scss";
+@import "./scss/components/header.scss";
+@import "./scss/components/footer.scss";
+
+//pages
+@import "./scss/pages/index.scss";
+@import "./scss/pages/pathologies.scss";
+@import "./scss/pages/prev.scss";
+@import "./scss/pages/reseau.scss";
+@import "./scss/pages/documentation.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.index {
+  a {
+    font-size: 3rem;
+    margin: 20px;
+  }
+
+  a:hover {
+    color: $mainColorDark;
+  }
+}
+
+main {
+  margin-top: 81px;
+}
+
+.hero {
+  @media (max-width: 1300px) {
+    &__desc {
+      grid-area: 4/3/6/6 !important;
+    }
+  }
+  @media (max-width: 1150px) {
+    &__desc {
+      grid-area: 4/2/6/6 !important;
+    }
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
+    grid-template-rows: 60px 100px 350px 160px auto;
+    grid-gap: 0;
+    padding: 0 75px;
+    margin-top: 175px;
+    &__name {
+      grid-area: 1/1/3/3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100% !important;
+      font-size: 3.2rem;
+    }
+    .attachment-post-thumbnail {
+      width: 100% !important;
+      height: 100% !important;
+      grid-area: 2/2/5/5;
+    }
+    &__desc {
+      width: 100% !important;
+      grid-area: 4/4/6/6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: max-content;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @media (min-width: 1334px) {
+    &__name {
+      font-size: 3.6rem;
+    }
+  }
+  padding: 0;
+  &__name,
+  &__desc {
+    width: 100vw;
+    color: white;
+    z-index: 1;
+    padding: 30px;
+    background-color: $mainColorDark;
+    p,
+    h2 {
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+  .attachment-post-thumbnail {
+    width: 100vw;
+    height: 460px;
+    object-fit: cover;
+  }
+}
+
+.youtubeIframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+}

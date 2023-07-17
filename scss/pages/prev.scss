@@ -1,0 +1,284 @@
+@import "../foundations/variables.scss";
+
+.prevCol {
+  padding: 0;
+  margin-top: 75px;
+  &__content {
+    background-color: $mainColorDark;
+    padding: 60px 30px;
+    h2 {
+      margin-bottom: 30px;
+    }
+    > * {
+      color: white;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  @media (min-width: 1120px) {
+    display: flex;
+    height: 700px;
+    &__content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px;
+    }
+    &__img {
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+
+.mesuresCol {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  h2 {
+    margin-bottom: 50px;
+  }
+  &__zoneContent,
+  &__zoneTitle {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__zoneTitle {
+    h4 {
+      padding: 20px;
+      border-bottom: 2px solid $mainColorDark;
+    }
+    .titleActive {
+      background: $mainColorDark;
+      color: white;
+    }
+  }
+  &__content {
+    margin-top: 50px;
+    display: none;
+    &:first-child {
+      display: block;
+    }
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+  &__div {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: 1000px) {
+    &__div {
+      flex-direction: row;
+    }
+    &__zoneTitle {
+      flex: 2;
+    }
+    &__zoneContent {
+      flex: 4;
+      padding: 0 50px;
+    }
+    &__content {
+      margin-top: 0;
+    }
+  }
+}
+
+.prevIndiv {
+  padding: 0;
+  @media (max-width: 1020px) {
+    &__title {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    padding: 120px 30px;
+    text-align: center;
+    &:nth-child(odd) {
+      background-color: $mainColorDark;
+      h3 {
+        color: white;
+      }
+      .prevIndiv__iconZone {
+        background-color: white;
+      }
+    }
+  }
+  &__iconZone {
+    background-color: $mainColorDark;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    border-radius: 50%;
+  }
+  &__img {
+    width: 90px;
+    height: 90px;
+  }
+  @media (min-width: 900px) {
+    display: flex;
+    &__item {
+      flex: 1;
+    }
+    &__iconZone {
+      margin: auto;
+    }
+    &__title {
+      display: flex;
+      align-items: center;
+      margin: auto;
+    }
+  }
+}
+
+.danger-risk {
+  .arrow {
+    width: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  &__schema {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    box-shadow: $shadow;
+  }
+  .eval-prev__title,
+  &__title {
+    width: 300px;
+    height: 170px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+  }
+  .sign {
+    width: 45px;
+    aspect-ratio: 1/1;
+    background-color: $mainColorDark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: white;
+      margin-bottom: 3px;
+    }
+  }
+  .eval-prev {
+    &__title {
+      color: white;
+      background-color: $mainColorDark;
+    }
+    &__content {
+      width: 300px;
+      height: 225px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 15px 0;
+      box-shadow: $shadow;
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  @media (min-width: 1100px) {
+    > h2,
+    > p {
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .danger-risk {
+      &__schema {
+        margin-top: 50px;
+      }
+      &__danger,
+      &__expo {
+        display: flex;
+        .arrow {
+          rotate: -90deg;
+          margin-top: auto;
+          margin-bottom: 60px;
+        }
+        .eval-prev {
+          margin: 0 20px;
+          &__title {
+            margin-top: 0;
+          }
+          &__content {
+            margin-bottom: 0;
+          }
+        }
+
+        .eval {
+          margin-left: 35px;
+        }
+      }
+      &__expo {
+        .eval-prev {
+          &__title {
+            display: none;
+          }
+        }
+      }
+      &__title {
+        margin: auto 35px 15px 0;
+      }
+      &__schema {
+        .sign {
+          margin: 30px 0;
+        }
+        .risk {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.principes-prev {
+  background-color: $mainColorDark;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    gap: 20px;
+    width: 69%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    margin: 30px 0;
+  }
+}

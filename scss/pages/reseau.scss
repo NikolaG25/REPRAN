@@ -1,0 +1,194 @@
+@import "../foundations/variables.scss";
+
+.reseau {
+  .members {
+    &__section {
+      margin: 50px auto;
+      h2 {
+        text-align: center;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__member {
+      margin: 20px;
+      width: 300px;
+      aspect-ratio: 1/1;
+      box-shadow: $shadow;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    &__image {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 2px solid $mainColorDark;
+    }
+    &__name {
+      text-align: center;
+    }
+  }
+  .social {
+    h2 {
+      text-align: center;
+      width: max-content;
+      margin: 50px auto;
+    }
+    &Media {
+      @media (min-width: 1000px) {
+        &__webinaires {
+          width: 50% !important;
+        }
+        &__twitter {
+          width: 25% !important;
+        }
+        &__listTweet {
+          width: 80% !important;
+        }
+      }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      &__listVideo,
+      &__listTweet {
+        margin: 30px auto;
+      }
+      &__listVideo {
+        aspect-ratio: 16/12;
+
+        width: 100%;
+      }
+      &__listTweet {
+        width: 50%;
+        height: 35vw;
+      }
+      &__video {
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin-bottom: 20px;
+      }
+      &__tweet {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      &__webinaires,
+      &__twitter {
+        width: 100%;
+      }
+    }
+  }
+  .objectifsSection {
+    margin-top: 100px;
+    padding: 0;
+    h2 {
+      padding: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .objectifs {
+      @media (min-width: 1000px) {
+        display: flex;
+        &__item {
+          width: 25vw;
+          height: 500px !important;
+        }
+      }
+      &__item {
+        height: 350px;
+        padding: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .objectifs__iconZone {
+          background-color: $mainColorDark;
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 50px;
+        }
+      }
+      &__item:nth-child(odd) {
+        background-color: $mainColorDark;
+        h3 {
+          color: white;
+        }
+        .objectifs__iconZone {
+          background-color: white;
+        }
+      }
+      .attachment-post-thumbnail {
+        width: 60%;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+      }
+    }
+  }
+  .call-fonct {
+    padding: 0;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .fonct,
+    .call {
+      @media (min-width: 1000px) {
+        display: flex;
+        > * {
+          width: 50% !important;
+          height: auto !important;
+        }
+        &__content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      &__content {
+        padding: 60px 30px;
+        background-color: $mainColorDark;
+        h2 {
+          margin-bottom: 30px;
+        }
+        > * {
+          color: white;
+        }
+      }
+    }
+  }
+  .actors {
+    padding-top: 0;
+    h2 {
+      text-align: center;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 50px;
+      justify-content: center;
+    }
+    &__container {
+      h3 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+      }
+    }
+  }
+}

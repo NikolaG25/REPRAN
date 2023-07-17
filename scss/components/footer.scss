@@ -1,0 +1,60 @@
+@import "../foundations/variables.scss";
+
+
+.footer {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    gap: 50px;
+
+    > * {
+        width: 320px;
+    }
+    .custom-logo {
+        width: 100%;
+        height: auto;
+    }
+    
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__contactItem, &__infosItem, .menu-item {
+        margin-bottom: 30px;
+    }
+
+    p, a {
+        font-size: 2rem;
+    }
+
+    a {
+        position: relative;
+        padding-bottom: 3px;
+    }
+
+    a::after {
+        margin-top: 5px;
+        width: 0;
+        height: 1px;
+        background-color: $mainColorDark;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: width .3s;
+    }
+
+    a:hover {
+        color: $mainColorDark;
+    }
+
+    a:hover::after {
+        width: 100%;
+        transition: width .3s;
+
+    }
+
+
+}

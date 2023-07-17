@@ -1,0 +1,45 @@
+@import "../foundations/variables.scss";
+
+.cardDocu {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    width: 65%;
+    color: white;
+    text-align: center;
+    padding: 15px 80px;
+    margin-bottom: -30px;
+    z-index: 1;
+    &.-darkBlue {
+      background-color: $mainColorDark;
+    }
+    &.-lightBlue {
+      background-color: $mainColor;
+    }
+    &.-orange {
+      background: $secondaryColor;
+    }
+  }
+
+  &__content {
+    background-color: white;
+    box-shadow: $shadow;
+    padding: 75px 25px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    > * {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .button {
+    margin-top: -30px;
+  }
+}

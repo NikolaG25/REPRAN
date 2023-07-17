@@ -1,0 +1,51 @@
+@import "../foundations/variables.scss";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  transition: all 0.3s;
+  a {
+    padding: 15px 30px;
+    font-size: 2rem;
+    color: white;
+  }
+
+  &.-orange {
+    background: $secondaryColor;
+
+    &:hover {
+      background: $secondaryColorLight;
+    }
+  }
+
+  &.-darkBlue {
+    background: $mainColorDark;
+    &:hover {
+      background: $mainColor;
+    }
+  }
+
+  &.-lightBlue {
+    background: $mainColor;
+    &:hover {
+      background: $mainColorDark;
+    }
+  }
+  &.-white {
+    background: white;
+    &:hover {
+      background: #ebebeb;
+    }
+    a {
+      color: black;
+    }
+  }
+
+  &.-big {
+    a {
+      padding: 20px 40px;
+      font-size: 2.4rem;
+    }
+  }
+}

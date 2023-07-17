@@ -1,0 +1,27 @@
+@import "../foundations/variables.scss";
+
+.cardContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  width: max-content;
+  &__name {
+    background-color: $mainColorDark;
+    color: white;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: -30px;
+  }
+  &__content {
+    box-shadow: $shadow;
+    padding: 35px 30px 15px 30px;
+    & > * {
+      margin: 20px 0;
+    }
+    & .button {
+      margin: 30px auto 10px auto;
+    }
+  }
+}

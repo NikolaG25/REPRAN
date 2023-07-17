@@ -1,0 +1,190 @@
+@import "../foundations/variables.scss";
+
+.pathologies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  &__item {
+    position: relative;
+    width: 100vw;
+    height: 450px;
+
+    padding: 0;
+    @media (min-width: 1000px) {
+      width: 50vw;
+      height: 45vh;
+    }
+  }
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .attachment-post-thumbnail {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__background {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(#00000000, #000000ff);
+    z-index: -1;
+  }
+  &__name {
+    color: white;
+    padding: 30px;
+  }
+}
+
+.pathologie {
+  .sector,
+  .docuPatho {
+    &__item {
+      text-align: center;
+      padding: 25px;
+      border: 2px solid $mainColorDark;
+      margin-top: 30px;
+      display: block;
+    }
+  }
+
+  .sector {
+    &__title {
+      margin: 60px auto;
+      text-align: center;
+
+    }
+    &__list {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      width: 300px;
+      font-size: 2rem;
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .docuPatho {
+    &__title {
+      margin: 60px auto;
+      width: max-content;
+    }
+    &__list {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      width: 300px;
+      font-size: 2rem;
+      margin-top: 0;
+      transition: all 0.3s;
+      margin-left: auto;
+      margin-right: auto;
+
+      &:hover {
+        background-color: $mainColorDark;
+        color: white;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .symptomes {
+    padding: 0;
+    @media (min-width: 700px) {
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &__item {
+        flex-grow: 1;
+        flex-basis: 300px;
+      }
+    }
+
+    &__title {
+      padding: 30px;
+      margin: 20px auto;
+      width: max-content;
+    }
+    &__list {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__zoneDesc {
+      width: 60%;
+      margin: 30px auto;
+    }
+    &__item {
+      padding: 50px 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2rem;
+      &:nth-child(2n) {
+        background-color: $mainColorDark;
+        color: white;
+      }
+    }
+  }
+  .declan-prev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    gap: 50px;
+    margin: 50px auto;
+  }
+
+  .declan,
+  .prev {
+    margin-bottom: 50px;
+    min-width: 300px;
+    width: 500px;
+    &__title {
+      padding: 20px;
+      background-color: $mainColorDark;
+      color: white;
+      text-align: center;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: -35px;
+    }
+    &__list {
+      box-shadow: $shadow;
+      padding: 50px;
+      height: 100%;
+    }
+    &__item {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &::before {
+        content: "\2022";
+        color: $mainColorDark;
+        font-weight: bold;
+        display: inline-block;
+        width: 1rem;
+        margin-right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+@import "../foundations/variables.scss";
+
+.bodyHeader {
+  display: block;
+}
+
+.header {
+  width: 100vw;
+  background-color: white;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+
+  &__toggle {
+    width: 100vw;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: $shadow;
+    .custom-logo {
+      width: 60px !important;
+      height: 60px !important;
+
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__menu {
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    transition: left 0.5s ease-in-out;
+
+
+  }
+
+  .custom-logo {
+    width: 150px;
+    height: 150px;
+  }
+  &__navLogo {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  &__logoMSA {
+    margin: 30px auto;
+  }
+  &__nav {
+    margin-top: 50px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-item {
+    margin: 20px 0;
+  }
+  .menu-item a {
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $mainColor;
+      transition: color 0.3s ease-in-out;
+      &::after {
+        width: 100%;
+        transition: width 0.4s ease-in-out;
+      }
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 0;
+      background-color: $mainColor;
+      transition: width 0.3s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  @media (min-width: 900px) {
+    flex-direction: row;
+    box-shadow: $shadow;
+    height: fit-content;
+    &__navLogo {
+      flex-direction: row;
+    }
+    &__logoMSA {
+      margin: 0 0 0 auto;
+    }
+    &__toggle {
+      display: none;
+    }
+    &__menu {
+      position: unset;
+      padding: 20px;
+      flex-direction: row;
+      justify-content: normal;
+      height: fit-content;
+    }
+    &__logo {
+      width: 75px;
+    }
+    &__nav {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+    &__list {
+      flex-direction: row;
+    }
+    .menu-item {
+      margin: 0 15px;
+    }
+    .custom-logo {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .custom-logo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: 1220px) {
+    .menu-item a {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    &__menu {
+      padding: 20px 50px;
+    }
+    &__nav {
+      margin-left: 30px;
+    }
+    .menu-item {
+      margin: 0 30px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__logoMSA {
+      width: 125px!important;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    &__logoMSA {
+      width: 100px;
+      img {
+        width: inherit;
+        height: auto;
+      }
+    }
+  }
+}
+
+.menu-open .header__menu {
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.menu-open,
+.menu-open body {
+  overflow: hidden;
+}
+
+.menu-open .nav-toggle-bar {
+  transform: rotate(135deg);
+}
+.menu-open .nav-toggle-bar::before,
+.menu-open .nav-toggle-bar::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.nav-toggle {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+  transform: translate(0, 0);
+}
+
+.nav-toggle-bar,
+.nav-toggle-bar::before,
+.nav-toggle-bar::after {
+  content: "";
+  background-color: black;
+  width: 100%;
+  height: 0.3rem;
+  position: absolute;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+.nav-toggle-bar::before {
+  top: -1rem;
+}
+.nav-toggle-bar::after {
+  top: 1rem;
+}

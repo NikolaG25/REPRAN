@@ -1,0 +1,52 @@
+@import "../foundations/variables.scss";
+
+.documentation {
+  form {
+    width: 80%;
+    margin: 175px auto 100px auto;
+  }
+  #docu_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 9  0%;
+    margin: 100px auto;
+    gap: 75px 30px;
+    justify-content: center;
+  }
+
+  input {
+    display: none;
+    &:checked + label {
+      background-color: $mainColor;
+      transition: background-color 0.3s;
+    }
+  }
+
+  .docu_filter_div {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  .docu_type {
+    margin-bottom: 50px;
+  }
+
+  label {
+    font-size: 2rem;
+    padding: 15px 30px;
+    background-color: $mainColorDark;
+    color: white;
+    border-radius: 60px;
+    display: block;
+    width: max-content;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $mainColor;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  }
+}

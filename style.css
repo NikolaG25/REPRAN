@@ -1,0 +1,10 @@
+/* 
+Theme Name: repran
+Theme URI: http://localhost/repran
+Author: Nicolas GELIN
+Description: Thème du site REPRAN
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+
+@import "./css/style.css"
