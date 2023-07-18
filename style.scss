@@ -22,6 +22,7 @@
 @import "./scss/pages/prev.scss";
 @import "./scss/pages/reseau.scss";
 @import "./scss/pages/documentation.scss";
+@import "./scss/pages/actus.scss";
 
 * {
   padding: 0;
@@ -38,21 +39,6 @@
 
 body {
   overflow-x: hidden;
-}
-
-.index {
-  a {
-    font-size: 3rem;
-    margin: 20px;
-  }
-
-  a:hover {
-    color: $mainColorDark;
-  }
-}
-
-main {
-  margin-top: 81px;
 }
 
 .hero {
@@ -72,7 +58,7 @@ main {
     grid-template-rows: 60px 100px 350px 160px auto;
     grid-gap: 0;
     padding: 0 75px;
-    margin-top: 175px;
+    margin-top: 75px;
     &__name {
       grid-area: 1/1/3/3;
       display: flex;

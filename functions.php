@@ -29,3 +29,8 @@ register_nav_menus([
 ]);
 
 require get_template_directory() . "/docu-query.php";
+
+function new_excerpt_lenght($length) {
+  return 50;
+};
+add_filter('excerpt_length', 'new_excerpt_lenght');

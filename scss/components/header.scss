@@ -8,7 +8,7 @@
   width: 100vw;
   background-color: white;
   margin: 0;
-  position: fixed;
+  // position: fixed;
   top: 0;
   z-index: 9999;
 
@@ -46,8 +46,8 @@
   }
 
   .custom-logo {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
   }
   &__navLogo {
     display: flex;
@@ -56,6 +56,7 @@
     align-items: center;
   }
   &__logoMSA {
+    display: none;
     margin: 30px auto;
   }
   &__nav {
@@ -100,6 +101,7 @@
       flex-direction: row;
     }
     &__logoMSA {
+      display: block;
       margin: 0 0 0 auto;
     }
     &__toggle {

@@ -1,3 +1,8 @@
+        <button class=scroll-top><img
+              src="<?php echo get_template_directory_uri(); ?>/img/icones/arrow_tem.svg"
+              alt="Remonter en haut de la page"
+              class="scroll-top__arrow"
+            /></button>
         <footer class="footer">
             <?php 
 
@@ -13,7 +18,6 @@
             <?php 
                 $custom_logo = the_custom_logo(  );
                 $logo = wp_get_attachment_image_src( $custom_logo , 'full' );
-                $logo_url = $logo[0];
             ?> 
             <div class="footer__contact">
                 <h2 class="footer__title">Contact</h2>
@@ -42,5 +46,5 @@
         </footer>
     <?php wp_footer(); ?>
     </body>
-
+    <script src="<?php bloginfo("template_url"); ?>/js/scroll-top.js"></script>
 </html>

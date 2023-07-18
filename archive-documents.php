@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="documentation" style="margin-top: 150px;">
+<main class="documentation" style="margin-top: 75px;">
 <form action="#" method="POST" id="filter">
   <div class="docu_type docu_filter_div">
   <?php $termsType = get_terms(["taxonomy" => "type-de-document"]);

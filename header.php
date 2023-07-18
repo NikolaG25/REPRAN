@@ -12,7 +12,6 @@
       <?php 
       $custom_logo = the_custom_logo(  );
       $logo = wp_get_attachment_image_src( $custom_logo , 'full' );
-      $logo_url = $logo[0];
     ?> 
         <div
           class="nav-toggle"
@@ -26,7 +25,6 @@
             <?php 
               $custom_logo = the_custom_logo(  );
               $logo = wp_get_attachment_image_src( $custom_logo , 'full' );
-              $logo_url = $logo[0];
             ?> 
           <nav class="header__nav">
               <?php wp_nav_menu( array( 

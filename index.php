@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="index">
+<main class="pageNews">
 <h1 class="siteHeading">
     Actualités
 	</h1>

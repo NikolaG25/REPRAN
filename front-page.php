@@ -40,9 +40,9 @@
       endif;
       ?> 
   
-        <span class="circle circle__big -blue"> </span>
+        <!-- <span class="circle circle__big -blue"> </span>
         <span class="circle circle__medium -orange"> </span>
-        <span class="circle circle__small -lightBlue"> </span>
+        <span class="circle circle__small -lightBlue"> </span> -->
 
   </div>
   <section class="presentation">
@@ -119,10 +119,12 @@
         
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/formes/Vector-1.svg"
+          alt="Forme vectorielle"
           class="presentation__stroke pres-grid-6"
         />
         <img
           src="<?php echo get_template_directory_uri(); ?>/img/formes/Vector-2.svg"
+          alt="Forme vectorielle"
           class="presentation__stroke pres-grid-7"
         />
         <img
@@ -347,7 +349,7 @@
           </div>
         </div>
   </section>
-  <section class="msa">
+  <!-- <section class="msa">
         <h2>Les MSA en France</h2>
         <div class="msa__content">
           <img src="<?php echo get_template_directory_uri(); ?>/img/carte_france.png" alt="Carte de la France" />
@@ -442,7 +444,7 @@
             </div>
           </div>
         </div>
-  </section>
+  </section> -->
   <section class="temoignages">
     
         <div class="temoignages__zone">
@@ -479,11 +481,13 @@
           </div>
 
           <div class="temoignages__index">
-            <img
+            <button><img
               src="<?php echo get_template_directory_uri(); ?>/img/icones/arrow_tem.svg"
               alt="Précédent"
               class="arrow_tem prev"
             />
+            </button>
+            
             <div class="circles">
               <?php
               $args2 = [
@@ -499,11 +503,12 @@
               ?>
 
             </div>
-            <img
+            <button><img
               src="<?php echo get_template_directory_uri(); ?>/img/icones/arrow_tem.svg"
               alt="Suivant"
               class="arrow_tem next"
-            />
+            /></button>
+            
           </div>
         </div>
         <?php $imageTem = get_field("image_temoignage"); ?>
