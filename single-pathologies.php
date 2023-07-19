@@ -98,5 +98,17 @@
         ?>
         <a href="<?php echo $linkDocu ?>" class="docuPatho__item h3">En savoir plus</a>
       </section>
+      <section class="singleActu">
+    <div class="content">
+          <?php
+          if (have_posts()) :
+          while (have_posts()) : the_post();
+              the_content();
+          endwhile;
+          endif;
+          ?>  
+      </div>
+    </section>
+</main>
 
 <?php get_footer(); ?>

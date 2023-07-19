@@ -60,7 +60,12 @@
 
 </form>
 
-        
+<!-- <?php echo do_shortcode('[ivory-search id="420" title="Custom Search Form"]'); ?> -->
+<form role="search" method="get" id="searchform" action="">
+        <input class="visible searchZone" type="text"  name="s" id="s" placeholder="Rechercher..." />
+        <input class="visible submit" type="submit" id="searchsubmit" value="Rechercher" />
+</form>
+
 <?php 
 
 $paged = get_query_var("paged") ? get_query_var("paged") : 1;
@@ -170,3 +175,25 @@ $query = new WP_Query($args);
 
 <?php get_footer(); ?>
 <script src="<?php bloginfo("template_url"); ?>/js/load-more.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  let searchForm = document.getElementById("searchform")
+  let filterItems = document.querySelectorAll(".cardDocu")
+
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let searchQuery = document.getElementById('s').value.toLowerCase().trim()
+
+    filterItems.forEach((item) => {
+      let itemContent = item.textContent.toLowerCase()
+      if (itemContent.includes(searchQuery)) {
+        item.style.display = "flex"
+      } else {
+        item.style.display = "none"
+      }
+
+    })
+  })
+})
+</script>

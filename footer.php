@@ -14,6 +14,8 @@
                 $mentions = get_field("mentions_legales", "nav_menu_".$menu_id);
                 $access = get_field("accessibilite", "nav_menu_".$menu_id);
                 $linkAccess = get_field("link_access", "nav_menu_".$menu_id);
+                $cookie = get_field("cookie","nav_menu_".$menu_id);
+                $conf = get_field("conf","nav_menu_".$menu_id);
             ?>
             <?php 
                 $custom_logo = the_custom_logo(  );
@@ -39,6 +41,8 @@
                 <h2 class="footer__title">Infos pratiques</h2>
                 <ul class="footer__infosList">
                     <li class="footer__infosItem"><a href="<?php echo $mentions  ?>">Mentions légales</a></li>
+                    <li class="footer__infosItem"><a href="<?php echo $cookie  ?>">Politique des cookies</a></li>
+                    <li class="footer__infosItem"><a href="<?php echo $conf  ?>">Politique de confidentialité</a></li>
                     <li class="footer__infosItem"><p>Accessibilité : </p><a href="<?php echo $linkAccess ?>" target="_blank" rel="noopener noreferrer"><?php echo $access ?></a></li>
                     <li class="footer__infosItem"><a href="mailto:<?php echo $mail ?>">Un problème à signaler ?</a></li>
                 </ul>

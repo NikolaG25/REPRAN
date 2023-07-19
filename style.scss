@@ -115,3 +115,21 @@ body {
   aspect-ratio: 16/9;
   height: auto;
 }
+
+a {
+  font-size: 1.6rem;
+}
+
+.content .wp-block-heading {
+  margin-top: 50px;
+}
+
+.content a {
+  color: $mainColorDark;
+  font-weight: 700;
+  &:hover {
+    color: $mainColor;	
+
+  }
+
+}
