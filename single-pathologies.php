@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 <main class="pathologie">
+      <button class="previousPage" onclick="window.history.back();">Page précédente</button>
       <section class="hero">
         <h1 class="hero__name"><?php echo the_title(); ?></h1>
         <?php the_post_thumbnail(); ?>
